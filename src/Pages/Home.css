@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;300;400;500;600;700;800&family=VT323&display=swap');
+
+.home {
+    font-family: 'Roboto Slab', serif;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.home>.topSec>.logoMain {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logoMain>img {
+    width: 353px;
+}
+
+.midSec {}
+
+.midSec>.videoLayer>video {
+    width: 100%;
+
+}
+
+.mid2Sec {
+    display: flex;
+    flex-direction: column;
+    margin-top: 44px;
+    margin-bottom: 15px;
+}
+
+.mid2Sec>.layer_mid2Sec {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.mid2Sec>.layer_mid2Sec>.head1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.mid2Sec>.layer_mid2Sec>.head1>:nth-child(1) {
+    font-size: 52px;
+    font-weight: 800;
+}
+
+.mid2Sec>.layer_mid2Sec>.head1>:nth-child(2) {
+    font-size: 52px;
+    font-weight: 800;
+}
+
+.mid2Sec>.layer_mid2Sec>.head1>:nth-child(3) {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* Contact US */
+.bottomSec {
+    background-color: #d3e6fd;
+    padding: 60px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contactUsForm {
+    padding: 27px 38px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+}
+
+.contactUsForm>span {
+    font-size: 30px;
+    font-weight: 500;
+    color: #5f6666;
+}
+
+.contactUsForm>form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contactUsForm>form>input {
+    width: 31rem;
+    padding: 20px 13px;
+    border: 1px solid #a6b9d0;
+    font-size: 17px;
+    border-radius: 10px;
+}
+
+.contactUsForm>form>button {
+    width: 92px;
+    padding: 10px 10px;
+    border: none;
+    background-color: #5695e2;
+    border-radius: 8px;
+    color: #ffff;
+    font-weight: 700;
+    font-size: 16px;
+    /* margin-left: 50%; */
+    cursor: pointer;
+}
+
+.contactUsForm>form>button:hover {
+
+    background-color: #ffff;
+    border: 2px solid #5695e2;
+    color: #5695e2;
+    transition: 200ms ease-in;
+
+}

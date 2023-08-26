@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;300;400;500;600;700;800&family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&family=Roboto+Slab:wght@200;300;400;500;600;700;800&family=VT323&display=swap');
 
 .home {
-    font-family: 'Roboto Slab', serif;
-
+    font-family: 'Montserrat', sans-serif;
     display: flex;
+    scroll-behavior: smooth;
     flex-direction: column;
 }
 
@@ -22,6 +22,19 @@
 .midSec>.videoLayer>video {
     width: 100%;
 
+}
+
+.midSec>.videoLayer {
+    position: relative;
+    /* object-fit: cover; */
+    height: 862px;
+
+}
+
+.midSec>.videoLayer>video {
+    position: absolute;
+    z-index: 0;
+    object-fit: cover;
 }
 
 .mid2Sec {
@@ -67,6 +80,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 50px;
 }
 
 .contactUsForm {
@@ -117,4 +131,40 @@
     color: #5695e2;
     transition: 200ms ease-in;
 
+}
+
+.nav {
+    margin: 0px 30px;
+}
+
+.nav>ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+
+.map>iframe {
+    width: 550px;
+    height: 346px;
+}
+
+.nav>ul>li {
+    list-style-type: none;
+    font-size: 20px;
+    font-weight: 400;
+
+}
+.nav>ul>li>a {
+    text-decoration: none;
+    color: #ffff;
+
+}
+
+.nav>ul>li:hover {
+    cursor: pointer;
+}
+
+.layer1 {
+    position: relative;
 }

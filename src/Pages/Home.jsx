@@ -1,9 +1,16 @@
 import React from 'react'
 import './Home.css'
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
 import logo from "../Images/logo.png"
 import cap from '../Images/cap.png'
 import wheel from '../Images/wheel.png'
+import revBoat from '../Images/revBoat.png'
+import img1 from '../Images/img1.jpg'
+import img2 from '../Images/img2.jpg'
+import img3 from '../Images/img3.jpg'
 import bgvideo from '../Images/backgroundSec2.mp4'
+import Carousole from '../Components/Carousole'
 
 const Home = () => {
     return (
@@ -44,9 +51,30 @@ const Home = () => {
                 </div>
 
             </div>
+            <div className="reviewSection" id='reviews'>
+                <div className="container_rev">
+                    <img src={revBoat} alt="" />
+                    <div className="caroSec">
+                        <div className="revMenu">
+                            <span>Connect with other members</span>
+                            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores dolor numquam praesentium expedita? Ipsa voluptatibus consectetur eveniet. Ipsum!</span>
+                            <span>Connect now</span>
+                        </div>
+                        <div className="carosoulSec">
+                            <Carousel autoPlay interval={3000} infiniteLoop centerMode centerSlidePercentage={35} showArrows>
+                                <Carousole image={img1} name="Julie Williams" reviews="Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores dolor numquam praesentium expedita? Ipsa voluptatibus consectetur eveniet. Ipsum!" />
+                                <Carousole image={img1} name="Anni Williams" reviews="Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores dolor numquam praesentium expedita? Ipsa voluptatibus consectetur eveniet. Ipsum!" />
+                                <Carousole image={img1} name="Meniy Williams" reviews="Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores dolor numquam praesentium expedita? Ipsa voluptatibus consectetur eveniet. Ipsum!" />
+                                <Carousole image={img1} name="Santie Williams" reviews="Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores dolor numquam praesentium expedita? Ipsa voluptatibus consectetur eveniet. Ipsum!" />
+                                <Carousole image={img1} name="marry Williams" reviews="Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores dolor numquam praesentium expedita? Ipsa voluptatibus consectetur eveniet. Ipsum!" />
+                            </Carousel>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div className="bottomSec" id='contactus'>
                 <div className="map">
-                    <iframe loading="lazy"  src="https://maps.google.com/maps?q=Achievers%20IAS%20Academy%20Patna&amp;t=m&amp;z=10&amp;output=embed&amp;iwloc=near" title="Achievers IAS Academy Patna" aria-label="Achievers IAS Academy Patna" data-gtm-yt-inspected-7="true" data-gtm-yt-inspected-12="true"></iframe>
+                    <iframe loading="lazy" src="https://maps.google.com/maps?q=Achievers%20IAS%20Academy%20Patna&amp;t=m&amp;z=10&amp;output=embed&amp;iwloc=near" title="Achievers IAS Academy Patna" aria-label="Achievers IAS Academy Patna" data-gtm-yt-inspected-7="true" data-gtm-yt-inspected-12="true"></iframe>
 
                 </div>
                 <div className="contactUsForm">

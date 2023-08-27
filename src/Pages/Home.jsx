@@ -48,6 +48,21 @@ const Home = () => {
                     </div>
                     <img src={wheel} alt="" />
                 </div>
+                <div className='lineBar'></div>
+                <div className="layer2_mid2Sec" id='gallery'>
+                    <span>Gallery</span>
+                    <div className="gallerySection">
+                        <img src={img2} alt="" />
+                        <img src={img3} alt="" />
+                        <img src={img2} alt="" />
+                        <img src={img2} alt="" />
+                        <img src={img1} alt="" />
+                        <img src={img3} alt="" />
+                        <img src={img1} alt="" />
+                    </div>
+                </div>
+                <div className='lineBar'></div>
+
 
             </div>
             <div className="reviewSection" id='reviews'>

@@ -35,6 +35,7 @@
 .midSec>.videoLayer>video {
     position: absolute;
     z-index: 0;
+    height: inherit;
     object-fit: cover;
 }
 
@@ -64,13 +65,13 @@
     font-weight: 800;
 }
 
-.mid2Sec>.layer_mid2Sec>.head1>:nth-child(2) {
+/* .mid2Sec>.layer_mid2Sec>.head1>:nth-child() {
     font-size: 52px;
     font-weight: 800;
-}
+} */
 
-.mid2Sec>.layer_mid2Sec>.head1>:nth-child(3) {
-    font-size: 12px;
+.mid2Sec>.layer_mid2Sec>.head1>:nth-child(2) {
+    font-size: 10px;
     font-weight: 600;
 }
 

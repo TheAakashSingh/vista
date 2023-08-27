@@ -43,8 +43,7 @@ const Home = () => {
                 <div className="layer_mid2Sec">
                     <img src={cap} alt="" />
                     <div className="head1">
-                        <span>Find The Right</span>
-                        <span> Boat For You</span>
+                        <span>Our Boat</span>
                         <span>Biuld and Get On Board Of Your Dream Silboat</span>
                     </div>
                     <img src={wheel} alt="" />

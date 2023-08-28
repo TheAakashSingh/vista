@@ -27,23 +27,19 @@ import gal6 from '../Images/gal7.jpg'
 import gal9 from '../Images/gal9.jpg'
 import gal10 from '../Images/gal10.jpg'
 const AutoplaySlider = withAutoplay(AwesomeSlider);
-function getWindowSize() {
-    const { innerWidth, innerHeight } = window;
-    return { innerWidth, innerHeight };
-}
 const Home = () => {
     const [click, setClick] = useState(false);
-    const [windowSize, setWindowSize] = useState(getWindowSize());
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
     useEffect(() => {
-        function handleWindowResize() {
-            setWindowSize(getWindowSize());
-        }
+        const handleResize = () => {
+            setIsMobile(window.innerWidth <= 768);
+        };
 
-        window.addEventListener('resize', handleWindowResize);
+        window.addEventListener('resize', handleResize);
 
         return () => {
-            window.removeEventListener('resize', handleWindowResize);
+            window.removeEventListener('resize', handleResize);
         };
     }, []);
     return (
@@ -57,9 +53,16 @@ const Home = () => {
             <div className="midSec">
                 <div className="videoLayer">
                     <video autoPlay loop muted id='bgVideo'>
-                        {console.log(windowSize)}
-                        {windowSize.innerWidth >= '531' ? <source src={bgvideo} type='video/mp4' /> : <source src={bgvideo3} type='video/mp4' />}
 
+                        {isMobile ? (
+                            
+                                <source src={bgvideo3} type='video/mp4' />
+                        
+                        ) : (
+                           
+                                <source src={bgvideo} type='video/mp4' />
+                          
+                        )}
                     </video>
                     <div className="layer1">
                         <div className={`nav ${click ? 'visibleji' : 'invisible'}`}>

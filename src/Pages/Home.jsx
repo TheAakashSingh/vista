@@ -24,7 +24,7 @@ import gal8 from '../Images/DJI_0269.JPG'
 import gal6 from '../Images/gal7.jpg'
 import gal9 from '../Images/gal9.jpg'
 import gal10 from '../Images/gal10.jpg'
-
+const AutoplaySlider = withAutoplay(AwesomeSlider);
 const Home = () => {
     const [click, setClick] = useState(false);
 
@@ -33,8 +33,7 @@ const Home = () => {
             <div className="topSec">
                 <div className="logoMain">
                     <img src={logo} alt="VISTA COMM" />
-                    <img onClick={() => setClick(true)} src={menuIcon} alt="" />
-                    {/* <h1>logo here</h1> */}
+                    <img onClick={() => setClick(!click)} src={menuIcon} alt="" /> {/* <h1>logo here</h1> */}
                 </div>
             </div>
             <div className="midSec">
@@ -43,7 +42,7 @@ const Home = () => {
                         <source src={bgvideo} type='video/mp4' />
                     </video>
                     <div className="layer1">
-                        <div className="nav">
+                        <div className={`nav ${click ? 'visibleji' : 'invisible'}`}>
                             <ul>
                                 <li><a href="#ourBoat">Our Boat</a></li>
                                 <li><a href="#gallery">Gallery</a></li>
@@ -72,25 +71,27 @@ const Home = () => {
                             <img src={gal1} alt="" />
                             <img src={gal2} alt="" />
                             <img src={gal10} alt="" />
+
+                            <img src={gal6} alt="" />
+                            <img className='bigImg2' src={gal7} alt="" />
+                            <img src={gal9} alt="" />
                         </div>
+                        {/*  </div>
                         {/* <div className="gal2">
                             <img src={gal3} alt="" />
                             <img src={gal5} alt="" />
                             <img src={gal4} alt="" />
                             <img src={gal8} alt="" />
                         </div> */}
-                        <div className="gal3">
-                                <img src={gal6} alt="" />
-                                <img src={gal7} alt="" />
-                            <img src={gal9} alt="" />
-                        </div>
+                        <div className="gal3"></div>
                     </div>
                 </div>
+                <span className='galleryHeading' id='reviews'>Reviews</span>
                 <div className='lineBar'></div>
 
-
             </div>
-            <div className="reviewSection" id='reviews'>
+            <div className="reviewSection" >
+                
                 <div className="container_rev">
                     <img src={revBoat} alt="" />
                     <div className="caroSec">
@@ -100,10 +101,12 @@ const Home = () => {
                             <span>Connect now</span>
                         </div>
                         <div className="carosoulSec">
-                            <AwesomeSlider play={true}
+                            <   AutoplaySlider play={true}
                                 transitionDelay={200}
                                 interval={2000}
                                 infinite
+                                autoPlay
+
 
                             >
                                 <div className='paage'><Carousole image={img1} name="Julie Williams" reviews="Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores dolor numquam praesentium expedita? Ipsa voluptatibus consectetur eveniet. Ipsum!" /></div>
@@ -123,13 +126,16 @@ const Home = () => {
                                     <Carousole image={img1} name="marry Williams" reviews="Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores dolor numquam praesentium expedita? Ipsa voluptatibus consectetur eveniet. Ipsum!" />
 
                                 </div>
-                            </AwesomeSlider>
+                            </AutoplaySlider>
 
                         </div>
                     </div>
                 </div>
+               
             </div>
-            <div className="bottomSec" id='contactus'>
+            <div className='contactHead' id='contactus'> <span >Contact Us</span></div>
+            <div className="bottomSec" >
+                
                 <div className="map">
                     <iframe loading="lazy" src="https://maps.google.com/maps?q=Achievers%20IAS%20Academy%20Patna&amp;t=m&amp;z=10&amp;output=embed&amp;iwloc=near" title="Achievers IAS Academy Patna" aria-label="Achievers IAS Academy Patna" data-gtm-yt-inspected-7="true" data-gtm-yt-inspected-12="true"></iframe>
 

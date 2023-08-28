@@ -80,10 +80,8 @@ const Home = () => {
                             <img src={gal8} alt="" />
                         </div> */}
                         <div className="gal3">
-                            <div>
                                 <img src={gal6} alt="" />
                                 <img src={gal7} alt="" />
-                            </div>
                             <img src={gal9} alt="" />
                         </div>
                     </div>

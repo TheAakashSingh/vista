@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import './Home.css'
 import AwesomeSlider from 'react-awesome-slider';
 
@@ -13,6 +13,7 @@ import menuIcon from '../Images/menuIcon.png'
 import img2 from '../Images/img2.jpg'
 import img3 from '../Images/img3.jpg'
 import bgvideo from '../Images/backgroundSec2.mp4'
+import bgvideo2 from '../Images/bgvdoMobile.mp4'
 import Carousole from '../Components/Carousole'
 import gal1 from '../Images/gal1.JPG'
 import gal7 from '../Images/DJI_0240.JPG'
@@ -27,6 +28,7 @@ import gal10 from '../Images/gal10.jpg'
 const AutoplaySlider = withAutoplay(AwesomeSlider);
 const Home = () => {
     const [click, setClick] = useState(false);
+    const windowSize = useRef([window.innerWidth, window.innerHeight]);
 
     return (
         <div className='home'>
@@ -39,7 +41,9 @@ const Home = () => {
             <div className="midSec">
                 <div className="videoLayer">
                     <video autoPlay loop muted id='bgVideo'>
-                        <source src={bgvideo} type='video/mp4' />
+                        {console.log(windowSize)}
+                        {windowSize.current[0]>='531'? <source src={bgvideo} type='video/mp4' />: <source src={bgvideo} type='video/mp4' />}
+                       
                     </video>
                     <div className="layer1">
                         <div className={`nav ${click ? 'visibleji' : 'invisible'}`}>

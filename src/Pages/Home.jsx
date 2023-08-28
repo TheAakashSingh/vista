@@ -55,13 +55,13 @@ const Home = () => {
                     <video autoPlay loop muted id='bgVideo'>
 
                         {isMobile ? (
-                            
-                                <source src={bgvideo3} type='video/mp4' />
-                        
+
+                            <source src={bgvideo3} type='video/mp4' />
+
                         ) : (
-                           
-                                <source src={bgvideo} type='video/mp4' />
-                          
+
+                            <source src={bgvideo} type='video/mp4' />
+
                         )}
                     </video>
                     <div className="layer1">
@@ -109,51 +109,56 @@ const Home = () => {
                         <div className="gal3"></div>
                     </div>
                 </div>
-                <span className='galleryHeading' id='reviews'>Reviews</span>
                 <div className='lineBar'></div>
 
             </div>
             <div className="reviewSection" >
+                <div>
+                    <span className='galleryHeading' id='reviews'>Reviews</span>
 
-                <div className="container_rev">
-                    <img src={revBoat} alt="" />
-                    <div className="caroSec">
-                        <div className="revMenu">
-                            <span>Connect with other members</span>
-                            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores dolor numquam praesentium expedita? Ipsa voluptatibus consectetur eveniet. Ipsum!</span>
-                            <span>Connect now</span>
-                        </div>
-                        <div className="carosoulSec">
-                            <   AutoplaySlider play={true}
-                                transitionDelay={200}
-                                interval={2000}
-                                infinite
-                                autoPlay
+                </div>
+                <div style={{display:'flex', alignItems:'center', flexDirection:'column', justifyContent:'center'}}>
+                    <div className="container_rev">
+                        <img src={revBoat} alt="" />
+                        <div className="caroSec">
+                            <div className="revMenu">
+                                <span>Connect with other members</span>
+                                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores dolor numquam praesentium expedita? Ipsa voluptatibus consectetur eveniet. Ipsum!</span>
+                                <span>Connect now</span>
+                            </div>
+                            <div className="carosoulSec">
+                                <   AutoplaySlider play={true}
+                                    transitionDelay={200}
+                                    interval={2000}
+                                    infinite
+                                    autoPlay
 
 
-                            >
-                                <div className='paage'><Carousole image={img1} name="Julie Williams" reviews="Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores dolor numquam praesentium expedita? Ipsa voluptatibus consectetur eveniet. Ipsum!" /></div>
-                                <div className='paage'>
-                                    <Carousole image={img1} name="Anni Williams" reviews="Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores dolor numquam praesentium expedita? Ipsa voluptatibus consectetur eveniet. Ipsum!" />
+                                >
+                                    <div className='paage'><Carousole image={img1} name="Julie Williams" reviews="Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores dolor numquam praesentium expedita? Ipsa voluptatibus consectetur eveniet. Ipsum!" /></div>
+                                    <div className='paage'>
+                                        <Carousole image={img1} name="Anni Williams" reviews="Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores dolor numquam praesentium expedita? Ipsa voluptatibus consectetur eveniet. Ipsum!" />
 
-                                </div>
-                                <div className='paage'>
-                                    <Carousole image={img1} name="Meniy Williams" reviews="Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores dolor numquam praesentium expedita? Ipsa voluptatibus consectetur eveniet. Ipsum!" />
+                                    </div>
+                                    <div className='paage'>
+                                        <Carousole image={img1} name="Meniy Williams" reviews="Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores dolor numquam praesentium expedita? Ipsa voluptatibus consectetur eveniet. Ipsum!" />
 
-                                </div>
-                                <div className='paage'>
-                                    <Carousole image={img1} name="Santie Williams" reviews="Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores dolor numquam praesentium expedita? Ipsa voluptatibus consectetur eveniet. Ipsum!" />
+                                    </div>
+                                    <div className='paage'>
+                                        <Carousole image={img1} name="Santie Williams" reviews="Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores dolor numquam praesentium expedita? Ipsa voluptatibus consectetur eveniet. Ipsum!" />
 
-                                </div>
-                                <div className='paage' >
-                                    <Carousole image={img1} name="marry Williams" reviews="Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores dolor numquam praesentium expedita? Ipsa voluptatibus consectetur eveniet. Ipsum!" />
+                                    </div>
+                                    <div className='paage' >
+                                        <Carousole image={img1} name="marry Williams" reviews="Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores dolor numquam praesentium expedita? Ipsa voluptatibus consectetur eveniet. Ipsum!" />
 
-                                </div>
-                            </AutoplaySlider>
+                                    </div>
+                                </AutoplaySlider>
 
+                            </div>
                         </div>
                     </div>
                 </div>
+
 
             </div>
             <div className='contactHead' id='contactus'> <span >Contact Us</span></div>

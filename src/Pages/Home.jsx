@@ -95,9 +95,9 @@ const Home = () => {
                             <img src={gal2} alt="" />
                             <img src={gal10} alt="" />
 
-                            <img src={gal6} alt="" />
-                            <img className='bigImg2' src={gal7} alt="" />
-                            <img src={gal9} alt="" />
+                            {window.innerWidth>=765 && window.innerWidth<=934?'':<img src={gal6} alt="" />}
+                            {window.innerWidth>=765 && window.innerWidth<=934?'':<img className='bigImg2' src={gal7} alt="" />}
+                            {window.innerWidth>=765 && window.innerWidth<=934?'':<img  src={gal9} alt="" />}
                         </div>
                         {/*  </div>
                         {/* <div className="gal2">
@@ -117,7 +117,7 @@ const Home = () => {
                     <span className='galleryHeading' id='reviews'>Reviews</span>
 
                 </div>
-                <div style={{display:'flex', alignItems:'center', flexDirection:'column', justifyContent:'center'}}>
+                <div style={{display:'flex', alignItems:'center', flexDirection:'column', justifyContent:'center', width:'-webkit-fill-available'}}>
                     <div className="container_rev">
                         <img src={revBoat} alt="" />
                         <div className="caroSec">

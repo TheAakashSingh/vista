@@ -91,21 +91,39 @@
 
 .layer2_mid2Sec>.gallerySection {
     display: flex;
-    gap: 37px;
+    gap: 15px;
     align-items: center;
     margin: 10px 240px;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-.layer2_mid2Sec>.gallerySection>img {
-    width: 200px;
-    height: 227px;
-    /* border-bottom-left-radius: 75px; */
-    border-bottom-right-radius: 75px;
-    border-top-left-radius: 75px;
+.gaal1, .gal2, .gal3 {
+    display: flex;
+    gap: 10px;
+
 }
 
+.gaal1>img {
+    width: 300px;
+    /* height: 252px; */
+}
+.gaal1>:nth-child(1){
+    width: 599px;
+}
+.gal2>img {
+    /* height: 252px; */
+    width: 300px;
+}
+
+.gal3>img {
+    /* height: 252px; */
+    width: 300px;
+}
+.gal3>:nth-child(2){
+    width: 604px;
+}
 .lineBar {
     height: 5px;
     width: 100%;

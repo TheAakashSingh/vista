@@ -11,6 +11,16 @@ import img2 from '../Images/img2.jpg'
 import img3 from '../Images/img3.jpg'
 import bgvideo from '../Images/backgroundSec2.mp4'
 import Carousole from '../Components/Carousole'
+import gal1 from '../Images/gal1.JPG'
+import gal7 from '../Images/DJI_0240.JPG'
+import gal2 from '../Images/gal2.jpg'
+import gal3 from '../Images/DJI_0258.JPG'
+import gal4 from '../Images/DJI_0259.JPG'
+import gal5 from '../Images/DJI_0268.JPG'
+import gal8 from '../Images/DJI_0269.JPG'
+import gal6 from '../Images/gal7.jpg'
+import gal9 from '../Images/gal9.jpg'
+import gal10 from '../Images/gal10.jpg'
 
 const Home = () => {
     return (
@@ -52,13 +62,22 @@ const Home = () => {
                 <div className="layer2_mid2Sec" id='gallery'>
                     <span>Gallery</span>
                     <div className="gallerySection">
-                        <img src={img2} alt="" />
-                        <img src={img3} alt="" />
-                        <img src={img2} alt="" />
-                        <img src={img2} alt="" />
-                        <img src={img1} alt="" />
-                        <img src={img3} alt="" />
-                        <img src={img1} alt="" />
+                        <div className="gaal1">
+                            <img src={gal1} alt="" />
+                            <img src={gal2} alt="" />
+                            <img src={gal10} alt="" />
+                        </div>
+                        <div className="gal2">
+                            <img src={gal3} alt="" />
+                            <img src={gal5} alt="" />
+                            <img src={gal4} alt="" />
+                            <img src={gal8} alt="" />
+                        </div>
+                        <div className="gal3">
+                            <img src={gal6} alt="" />
+                            <img src={gal7} alt="" />
+                            <img src={gal9} alt="" />
+                        </div>
                     </div>
                 </div>
                 <div className='lineBar'></div>

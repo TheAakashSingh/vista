@@ -1,12 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Home.css'
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from 'react-responsive-carousel';
+import AwesomeSlider from 'react-awesome-slider';
+
+import withAutoplay from 'react-awesome-slider/dist/autoplay';
+import 'react-awesome-slider/dist/styles.css';
 import logo from "../Images/logo.png"
 import cap from '../Images/cap.png'
 import wheel from '../Images/wheel.png'
 import revBoat from '../Images/revBoat.png'
 import img1 from '../Images/img1.jpg'
+import menuIcon from '../Images/menuIcon.png'
 import img2 from '../Images/img2.jpg'
 import img3 from '../Images/img3.jpg'
 import bgvideo from '../Images/backgroundSec2.mp4'
@@ -23,11 +26,14 @@ import gal9 from '../Images/gal9.jpg'
 import gal10 from '../Images/gal10.jpg'
 
 const Home = () => {
+    const [click, setClick] = useState(false);
+
     return (
         <div className='home'>
             <div className="topSec">
                 <div className="logoMain">
                     <img src={logo} alt="VISTA COMM" />
+                    <img onClick={() => setClick(true)} src={menuIcon} alt="" />
                     {/* <h1>logo here</h1> */}
                 </div>
             </div>
@@ -41,8 +47,8 @@ const Home = () => {
                             <ul>
                                 <li><a href="#ourBoat">Our Boat</a></li>
                                 <li><a href="#gallery">Gallery</a></li>
-                                <li><a href="#contactus">Contact Us</a></li>
                                 <li><a href="#reviews">Reviews</a></li>
+                                <li><a href="#contactus">Contact Us</a></li>
                             </ul>
                         </div>
                     </div>
@@ -51,12 +57,12 @@ const Home = () => {
             </div>
             <div className="mid2Sec " id='ourBoat'>
                 <div className="layer_mid2Sec">
-                    <img src={cap} alt="" />
+                    {/* <img src={cap} alt="" /> */}
                     <div className="head1">
                         <span>Our Boat</span>
                         <span>Biuld and Get On Board Of Your Dream Silboat</span>
                     </div>
-                    <img src={wheel} alt="" />
+                    {/* <img src={wheel} alt="" /> */}
                 </div>
                 <div className='lineBar'></div>
                 <div className="layer2_mid2Sec" id='gallery'>
@@ -67,15 +73,17 @@ const Home = () => {
                             <img src={gal2} alt="" />
                             <img src={gal10} alt="" />
                         </div>
-                        <div className="gal2">
+                        {/* <div className="gal2">
                             <img src={gal3} alt="" />
                             <img src={gal5} alt="" />
                             <img src={gal4} alt="" />
                             <img src={gal8} alt="" />
-                        </div>
+                        </div> */}
                         <div className="gal3">
-                            <img src={gal6} alt="" />
-                            <img src={gal7} alt="" />
+                            <div>
+                                <img src={gal6} alt="" />
+                                <img src={gal7} alt="" />
+                            </div>
                             <img src={gal9} alt="" />
                         </div>
                     </div>
@@ -94,13 +102,31 @@ const Home = () => {
                             <span>Connect now</span>
                         </div>
                         <div className="carosoulSec">
-                            <Carousel autoPlay interval={3000} infiniteLoop centerMode centerSlidePercentage={35} showArrows>
-                                <Carousole image={img1} name="Julie Williams" reviews="Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores dolor numquam praesentium expedita? Ipsa voluptatibus consectetur eveniet. Ipsum!" />
-                                <Carousole image={img1} name="Anni Williams" reviews="Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores dolor numquam praesentium expedita? Ipsa voluptatibus consectetur eveniet. Ipsum!" />
-                                <Carousole image={img1} name="Meniy Williams" reviews="Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores dolor numquam praesentium expedita? Ipsa voluptatibus consectetur eveniet. Ipsum!" />
-                                <Carousole image={img1} name="Santie Williams" reviews="Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores dolor numquam praesentium expedita? Ipsa voluptatibus consectetur eveniet. Ipsum!" />
-                                <Carousole image={img1} name="marry Williams" reviews="Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores dolor numquam praesentium expedita? Ipsa voluptatibus consectetur eveniet. Ipsum!" />
-                            </Carousel>
+                            <AwesomeSlider play={true}
+                                transitionDelay={200}
+                                interval={2000}
+                                infinite
+
+                            >
+                                <div className='paage'><Carousole image={img1} name="Julie Williams" reviews="Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores dolor numquam praesentium expedita? Ipsa voluptatibus consectetur eveniet. Ipsum!" /></div>
+                                <div className='paage'>
+                                    <Carousole image={img1} name="Anni Williams" reviews="Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores dolor numquam praesentium expedita? Ipsa voluptatibus consectetur eveniet. Ipsum!" />
+
+                                </div>
+                                <div className='paage'>
+                                    <Carousole image={img1} name="Meniy Williams" reviews="Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores dolor numquam praesentium expedita? Ipsa voluptatibus consectetur eveniet. Ipsum!" />
+
+                                </div>
+                                <div className='paage'>
+                                    <Carousole image={img1} name="Santie Williams" reviews="Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores dolor numquam praesentium expedita? Ipsa voluptatibus consectetur eveniet. Ipsum!" />
+
+                                </div>
+                                <div className='paage' >
+                                    <Carousole image={img1} name="marry Williams" reviews="Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores dolor numquam praesentium expedita? Ipsa voluptatibus consectetur eveniet. Ipsum!" />
+
+                                </div>
+                            </AwesomeSlider>
+
                         </div>
                     </div>
                 </div>

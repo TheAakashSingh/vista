@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import './Home.css'
 import AwesomeSlider from 'react-awesome-slider';
 
@@ -13,6 +13,7 @@ import menuIcon from '../Images/menuIcon.png'
 import img2 from '../Images/img2.jpg'
 import img3 from '../Images/img3.jpg'
 import bgvideo from '../Images/backgroundSec2.mp4'
+import bgvideo3 from '../Images/vdo23.mp4'
 import bgvideo2 from '../Images/bgvdoMobile.mp4'
 import Carousole from '../Components/Carousole'
 import gal1 from '../Images/gal1.JPG'
@@ -26,10 +27,25 @@ import gal6 from '../Images/gal7.jpg'
 import gal9 from '../Images/gal9.jpg'
 import gal10 from '../Images/gal10.jpg'
 const AutoplaySlider = withAutoplay(AwesomeSlider);
+function getWindowSize() {
+    const { innerWidth, innerHeight } = window;
+    return { innerWidth, innerHeight };
+}
 const Home = () => {
     const [click, setClick] = useState(false);
-    const windowSize = useRef([window.innerWidth, window.innerHeight]);
+    const [windowSize, setWindowSize] = useState(getWindowSize());
 
+    useEffect(() => {
+        function handleWindowResize() {
+            setWindowSize(getWindowSize());
+        }
+
+        window.addEventListener('resize', handleWindowResize);
+
+        return () => {
+            window.removeEventListener('resize', handleWindowResize);
+        };
+    }, []);
     return (
         <div className='home'>
             <div className="topSec">
@@ -42,8 +58,8 @@ const Home = () => {
                 <div className="videoLayer">
                     <video autoPlay loop muted id='bgVideo'>
                         {console.log(windowSize)}
-                        {windowSize.current[0]>='531'? <source src={bgvideo} type='video/mp4' />: <source src={bgvideo} type='video/mp4' />}
-                       
+                        {windowSize.innerWidth >= '531' ? <source src={bgvideo} type='video/mp4' /> : <source src={bgvideo3} type='video/mp4' />}
+
                     </video>
                     <div className="layer1">
                         <div className={`nav ${click ? 'visibleji' : 'invisible'}`}>
@@ -95,7 +111,7 @@ const Home = () => {
 
             </div>
             <div className="reviewSection" >
-                
+
                 <div className="container_rev">
                     <img src={revBoat} alt="" />
                     <div className="caroSec">
@@ -135,11 +151,11 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
-               
+
             </div>
             <div className='contactHead' id='contactus'> <span >Contact Us</span></div>
             <div className="bottomSec" >
-                
+
                 <div className="map">
                     <iframe loading="lazy" src="https://maps.google.com/maps?q=Achievers%20IAS%20Academy%20Patna&amp;t=m&amp;z=10&amp;output=embed&amp;iwloc=near" title="Achievers IAS Academy Patna" aria-label="Achievers IAS Academy Patna" data-gtm-yt-inspected-7="true" data-gtm-yt-inspected-12="true"></iframe>
 

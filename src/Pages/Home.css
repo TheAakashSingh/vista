@@ -433,7 +433,7 @@
 
 }
 
-@media (min-width:1500px) {
+@media (min-width:2000px) {
     .revMenu>:nth-child(1) {
         font-size: 41px;
     }

@@ -9,6 +9,7 @@ import cap from '../Images/cap.png'
 import wheel from '../Images/wheel.png'
 import revBoat from '../Images/revBoat.png'
 import img1 from '../Images/img1.jpg'
+import wave from '../Images/wave.png'
 import menuIcon from '../Images/menuIcon.png'
 import img2 from '../Images/img2.jpg'
 import img3 from '../Images/img3.jpg'
@@ -95,9 +96,9 @@ const Home = () => {
                             <img src={gal2} alt="" />
                             <img src={gal10} alt="" />
 
-                            {window.innerWidth>=765 && window.innerWidth<=934?'':<img src={gal6} alt="" />}
-                            {window.innerWidth>=765 && window.innerWidth<=934?'':<img className='bigImg2' src={gal7} alt="" />}
-                            {window.innerWidth>=765 && window.innerWidth<=934?'':<img  src={gal9} alt="" />}
+                            {window.innerWidth >= 765 && window.innerWidth <= 934 ? '' : <img src={gal6} alt="" />}
+                            {window.innerWidth >= 765 && window.innerWidth <= 934 ? '' : <img className='bigImg2' src={gal7} alt="" />}
+                            {window.innerWidth >= 765 && window.innerWidth <= 934 ? '' : <img src={gal9} alt="" />}
                         </div>
                         {/*  </div>
                         {/* <div className="gal2">
@@ -117,7 +118,7 @@ const Home = () => {
                     <span className='galleryHeading' id='reviews'>Reviews</span>
 
                 </div>
-                <div style={{display:'flex', alignItems:'center', flexDirection:'column', justifyContent:'center', width:'-webkit-fill-available'}}>
+                <div style={{ display: 'flex', alignItems: 'center', flexDirection: 'column', justifyContent: 'center', width: '-webkit-fill-available' }}>
                     <div className="container_rev">
                         <img src={revBoat} alt="" />
                         <div className="caroSec">
@@ -177,6 +178,9 @@ const Home = () => {
                         <button>Submit</button>
                     </form>
                 </div>
+            </div>
+            <div className="footer">
+                <img src={wave} alt="" />
             </div>
         </div>
     )

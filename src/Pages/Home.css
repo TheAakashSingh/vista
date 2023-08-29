@@ -171,7 +171,7 @@
 
 /* Contact US */
 .bottomSec {
-    background: url('../Images/gal1.JPG');
+    background-color:#d3e6fd;
     padding: 100px 40px;
     background-size: cover;
     background-position-y: -352px;
@@ -287,7 +287,12 @@
 
 
 }
-
+.footer{
+    margin-top: 80px;
+}
+.footer>img {
+    width: -webkit-fill-available;
+}
 .reviewSection>div>.container_rev {
     background-color: #012f6b;
     width: 75%;

@@ -437,6 +437,7 @@
 @media (max-width:1500px) {
     .bottomSec {
         flex-wrap: wrap;
+        background-position-y:unset !important ;
     }
 
 }

@@ -93,18 +93,21 @@
     font-weight: 800;
     /* margin-right: 66px; */
 }
-.contactHead{
+
+.contactHead {
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 10px 0px;
 }
+
 .contactHead>span {
     font-size: 52px;
     text-align: center;
     font-weight: 800;
     /* margin-right: 66px; */
 }
+
 .galleryHeading {
     font-size: 52px;
     font-weight: 800;
@@ -168,8 +171,10 @@
 
 /* Contact US */
 .bottomSec {
-    background-color: #d3e6fd;
-    padding: 60px 40px;
+    background: url('../Images/gal1.JPG');
+    padding: 100px 40px;
+    background-size: cover;
+    background-position-y: -352px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -450,11 +455,12 @@
         font-size: 25px;
     }
 }
-@media (max-width:410px){
+
+@media (max-width:410px) {
     .carosoulSec {
-      
+
         width: 186px !important;
-       
+
     }
-    
+
 }

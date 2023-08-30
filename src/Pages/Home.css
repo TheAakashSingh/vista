@@ -51,10 +51,9 @@
     margin-bottom: -16px;
 }
 
-.mid2Sec>.layer_mid2Sec {
+.mid2Sec>.layer_mid2Sec {}
 
-}
-.boatSection{
+.boatSection {
     display: flex;
     flex-direction: column;
     margin: 20px 0px;
@@ -63,7 +62,11 @@
     justify-content: center;
     background-color: #b5d3f9;
 }
-.boat1,.boat2,.boat3, .boat4{
+
+.boat1,
+.boat2,
+.boat3,
+.boat4 {
     border-radius: 6px;
 
 }
@@ -74,45 +77,93 @@
     align-items: center;
     justify-content: center;
 }
-.nextPart1{
+
+.nextPart1 {
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 10px;
+    color: #ffff;
 }
-.nextPartBoat>img{
+
+.nextPartBoat>img {
     width: 200px;
+    border-radius: 16px;
 }
-.boxBoat1{
+
+.boxBoat1 {
     background: url('../Images/bgBoat.jpg');
     background-size: cover;
 }
-.boat1>.boxBoat1{
+
+.boat1>.boxBoat1 {
     float: right;
     margin: 2px 40px;
+
     padding: 22px 24px;
 }
-.boat2>.boxBoat1{
+
+.boat2>.boxBoat1 {
     float: left;
     margin: 2px 40px;
     padding: 22px 24px;
 }
-.boat3>.boxBoat1{
+
+.boat3>.boxBoat1 {
     float: right;
     margin: 2px 40px;
     padding: 22px 24px;
 }
-.boat4>.boxBoat1{
+
+.boat4>.boxBoat1 {
     float: left;
     margin: 2px 40px;
     padding: 22px 24px;
 }
-.boxBoat1{
+
+.boxBoat1 {
     display: flex;
     justify-content: center;
     flex-direction: column;
     border-radius: 10px;
 }
+
+.boxBoat1>:nth-child(1) {
+    width: max-content;
+    font-size: 36px;
+    color: #ffff;
+    font-weight: 800;
+}
+
+.nextPart1>:nth-child(1) {
+    font-size: 27px;
+    font-weight: 600;
+    max-width: 412px;
+}
+
+.nextPart1>:nth-child(2) {
+    font-size: 25px;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.nextPart1>:nth-child(3) {
+    max-width: 371px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #fbfcfd;
+    font-style: italic;
+}
+
+.nextPart1>:nth-child(4) {
+
+    font-weight: 100;
+    color: #fafafa;
+
+}
+
+
+
 .mid2Sec>.layer_mid2Sec>.head1 {
     display: flex;
     flex-direction: column;
@@ -494,6 +545,7 @@
     .logoMain>:nth-child(2) {
         display: block;
     }
+
     .nextPartBoat {
         flex-direction: column-reverse;
     }
@@ -533,6 +585,7 @@
     .bottomSec {
         flex-wrap: wrap;
     }
+
     .boatSection {
         flex-wrap: wrap;
     }

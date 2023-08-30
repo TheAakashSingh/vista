@@ -120,9 +120,9 @@ const Home = () => {
                                 <span>Go-Star</span>
                                 <div className="nextPartBoat">
                                     <div className="nextPart1">
-                                        <span>Discover the game changinng power of new era</span>
+                                        <span>Your Luxurious Boat Rental Experience</span>
                                         <span>3D PRODUCT</span>
-                                        <span>VISUALIZATION in 2023</span>
+                                        <span>Discover the ultimate in luxury and comfort with Go-Star, where your dreams of an unforgettable boat adventure come true. Our exceptional boat rental service is dedicated to providing you with a one-of-a-kind experience that blends the excitement of cruising with the comforts of home. Step aboard and embark on a journey of indulgence and relaxation.</span>
                                         <span>Discover the Advantages</span>
                                     </div>
                                     <img src={gal2} alt="" />
@@ -134,9 +134,9 @@ const Home = () => {
                                 <span>Go-Star</span>
                                 <div className="nextPartBoat">
                                     <div className="nextPart1">
-                                        <span>Discover the game changinng power of new era</span>
+                                        <span>Unparalleled Comfort on the Water</span>
                                         <span>3D PRODUCT</span>
-                                        <span>VISUALIZATION in 2023</span>
+                                        <span>At Go-Star, we redefine the concept of boat rentals. Imagine a vessel where every detail is meticulously designed to ensure your comfort and convenience. Our boats feature spacious and elegantly furnished living areas, complete with plush sofas, cozy beds, and dining spaces that provide the perfect atmosphere for relaxation, socializing, and fine dining.</span>
                                         <span>Discover the Advantages</span>
                                     </div>
                                     <img src={gal3} alt="" />
@@ -148,9 +148,9 @@ const Home = () => {
                                 <span>Go-Star</span>
                                 <div className="nextPartBoat">
                                     <div className="nextPart1">
-                                        <span>Discover the game changinng power of new era</span>
+                                        <span>Adventure and Exploration Await</span>
                                         <span>3D PRODUCT</span>
-                                        <span>VISUALIZATION in 2023</span>
+                                        <span>Step out onto the deck and be greeted by breathtaking vistas that change with every passing moment. Feel the wind in your hair as you cruise along stunning coastlines, discovering hidden coves and pristine beaches. Whether you're seeking tranquility or adventure, Go-Star offers the ideal setting for both.</span>
                                         <span>Discover the Advantages</span>
                                     </div>
                                     <img src={gal4} alt="" />
@@ -162,9 +162,9 @@ const Home = () => {
                                 <span>Go-Star</span>
                                 <div className="nextPartBoat">
                                     <div className="nextPart1">
-                                        <span>Discover the game changinng power of new era</span>
-                                        <span>3D PRODUCT</span>
+                                        <span>Book Your Voyage</span>
                                         <span>VISUALIZATION in 2023</span>
+                                        <span>Don't miss out on the opportunity to sail with Go-Star and experience the epitome of luxury on the water. Contact us today to reserve your spot and embark on a journey that promises relaxation, beauty, and the thrill of the sea. Your voyage with Go-Star awaits – a voyage that promises to be everything you've ever dreamed of and more.</span>
                                         <span>Discover the Advantages</span>
                                     </div>
                                     <img src={gal4} alt="" />

@@ -125,7 +125,7 @@ const Home = () => {
                                         <span>VISUALIZATION in 2023</span>
                                         <span>Discover the Advantages</span>
                                     </div>
-                                    {/* <img src={gal2} alt="" /> */}
+                                    <img src={gal2} alt="" />
                                 </div>
                             </div>
                         </div>
@@ -139,7 +139,7 @@ const Home = () => {
                                         <span>VISUALIZATION in 2023</span>
                                         <span>Discover the Advantages</span>
                                     </div>
-                                    {/* <img src={gal3} alt="" /> */}
+                                    <img src={gal3} alt="" />
                                 </div>
                             </div>
                         </div>
@@ -153,7 +153,21 @@ const Home = () => {
                                         <span>VISUALIZATION in 2023</span>
                                         <span>Discover the Advantages</span>
                                     </div>
-                                    {/* <img src={gal4} alt="" /> */}
+                                    <img src={gal4} alt="" />
+                                </div>
+                            </div>
+                        </div>
+                        <div className="boat4">
+                            <div className="boxBoat1">
+                                <span>Go-Star</span>
+                                <div className="nextPartBoat">
+                                    <div className="nextPart1">
+                                        <span>Discover the game changinng power of new era</span>
+                                        <span>3D PRODUCT</span>
+                                        <span>VISUALIZATION in 2023</span>
+                                        <span>Discover the Advantages</span>
+                                    </div>
+                                    <img src={gal4} alt="" />
                                 </div>
                             </div>
                         </div>

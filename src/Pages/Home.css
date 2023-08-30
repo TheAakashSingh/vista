@@ -63,7 +63,7 @@
     justify-content: center;
     background-color: #b5d3f9;
 }
-.boat1,.boat2,.boat3{
+.boat1,.boat2,.boat3, .boat4{
     border-radius: 6px;
 
 }
@@ -99,6 +99,11 @@
 }
 .boat3>.boxBoat1{
     float: right;
+    margin: 2px 40px;
+    padding: 22px 24px;
+}
+.boat4>.boxBoat1{
+    float: left;
     margin: 2px 40px;
     padding: 22px 24px;
 }
@@ -488,6 +493,9 @@
 @media (max-width:497px) {
     .logoMain>:nth-child(2) {
         display: block;
+    }
+    .nextPartBoat {
+        flex-direction: column-reverse;
     }
 
     .visibleji {

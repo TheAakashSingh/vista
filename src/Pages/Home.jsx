@@ -128,7 +128,7 @@ const Home = () => {
                                     <img src={gal2} alt="" />
                                 </div>
                             </div>
-                        </div>
+                        </div>s
                         <div className="boat2">
                             <div className="boxBoat1">
                                 <span>Go-Star</span>

@@ -106,14 +106,18 @@ const Home = () => {
                     </video>
 
                 </div>
+                <div className='lineBar' style={{marginTop:'0px'}}></div>
+
 
             </div>
             <div className="mid2Sec " id='ourBoat' ref={ourBoatRef}>
-                <div className="layer_mid2Sec">
+                 <div className="layer_mid2Sec">
                     <div className="head1">
                         <span>Our Boat</span>
                         <span>Biuld and Get On Board Of Your Dream Silboat</span>
                     </div>
+                <div className='lineBar' style={{marginBottom:'-20px'}}></div>
+
                     <div className="boatSection">
                         <div className="boat1">
                             <div className="boxBoat1">
@@ -123,7 +127,7 @@ const Home = () => {
                                         <span>Your Luxurious Boat Rental Experience</span>
                                         <span>3D PRODUCT</span>
                                         <span>Discover the ultimate in luxury and comfort with Go-Star, where your dreams of an unforgettable boat adventure come true. Our exceptional boat rental service is dedicated to providing you with a one-of-a-kind experience that blends the excitement of cruising with the comforts of home. Step aboard and embark on a journey of indulgence and relaxation.</span>
-                                        <span>Discover the Advantage</span>
+                                        <span>Discover the Advantages</span>
                                     </div>
                                     <img src={gal2} alt="" />
                                 </div>
@@ -173,7 +177,7 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
-                <div className='lineBar'></div>
+                <div className='lineBar' style={{marginTop:'-20px'}}></div>
                 <div className="layer2_mid2Sec" id='gallery' ref={galleryRef}>
                     <span>Gallery</span>
                     <div className="gallerySection">

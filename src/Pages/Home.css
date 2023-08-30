@@ -171,13 +171,16 @@
 
 /* Contact US */
 .bottomSec {
-    background-color:#d3e6fd;
+    /* background-color: #d3e6fd; */
+    background: url('../Images/wave.png');
     padding: 100px 40px;
-    background-size: cover;
-    background-position-y: -352px;
+    /* background-size: cover; */
+    background-position-y: bottom;
+    background-size: contain;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-repeat: no-repeat;
     gap: 50px;
 }
 
@@ -260,7 +263,7 @@
 
 .nav>ul>li>a {
     text-decoration: none;
-    color: #ffff;
+    color: #000000;
     scroll-behavior: smooth;
     transition-delay: 500ms;
 
@@ -271,7 +274,8 @@
 }
 
 .layer1 {
-    position: relative;
+    /* position: relative; */
+    margin-bottom: 20px;
 }
 
 
@@ -363,7 +367,16 @@
     width: 240px !important;
     height: 194px !important;
 }
+.carousel>ul{
+    gap: 27px;
+}
+.carousel>ul>li{
+    /* display: inline-block;
+    width: 44%;
+    flex-shrink: 0;
+    height: fit-content; */
 
+}
 @media (max-width: 768px) {
     .carousel-root {
         width: 300px;
@@ -421,7 +434,13 @@
         background-color: #1a8dc687;
         padding: 14px 0px;
     }
-
+    .layer1 {
+        margin-bottom: 20px;
+        position: absolute;
+        width: -webkit-fill-available;
+        margin-top: 42px;
+        z-index: 1;
+    }
     .invisible {
         display: none;
     }
@@ -442,7 +461,6 @@
 @media (max-width:1500px) {
     .bottomSec {
         flex-wrap: wrap;
-        background-position-y:unset !important ;
     }
 
 }

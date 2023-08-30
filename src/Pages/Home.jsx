@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react'
 import './Home.css'
 import AwesomeSlider from 'react-awesome-slider';
-
+import HoverCarousel from "hover-carousel";
 import withAutoplay from 'react-awesome-slider/dist/autoplay';
 import 'react-awesome-slider/dist/styles.css';
 import logo from "../Images/logo.png"
@@ -31,7 +31,14 @@ const AutoplaySlider = withAutoplay(AwesomeSlider);
 const Home = () => {
     const [click, setClick] = useState(false);
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
-
+    const images = [
+        gal1,
+        gal6,
+        gal10,
+        gal9,
+        gal4,
+        gal5,
+    ];
     useEffect(() => {
         const handleResize = () => {
             setIsMobile(window.innerWidth <= 768);
@@ -51,6 +58,16 @@ const Home = () => {
                     <img onClick={() => setClick(!click)} src={menuIcon} alt="" /> {/* <h1>logo here</h1> */}
                 </div>
             </div>
+            <div className="layer1">
+                <div className={`nav ${click ? 'visibleji' : 'invisible'}`}>
+                    <ul>
+                        <li><a href="#ourBoat">Our Boat</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#reviews">Reviews</a></li>
+                        <li><a href="#contactus">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
             <div className="midSec">
                 <div className="videoLayer">
                     <video autoPlay loop muted id='bgVideo'>
@@ -65,16 +82,7 @@ const Home = () => {
 
                         )}
                     </video>
-                    <div className="layer1">
-                        <div className={`nav ${click ? 'visibleji' : 'invisible'}`}>
-                            <ul>
-                                <li><a href="#ourBoat">Our Boat</a></li>
-                                <li><a href="#gallery">Gallery</a></li>
-                                <li><a href="#reviews">Reviews</a></li>
-                                <li><a href="#contactus">Contact Us</a></li>
-                            </ul>
-                        </div>
-                    </div>
+
                 </div>
 
             </div>
@@ -91,23 +99,7 @@ const Home = () => {
                 <div className="layer2_mid2Sec" id='gallery'>
                     <span>Gallery</span>
                     <div className="gallerySection">
-                        <div className="gaal1">
-                            <img src={gal1} alt="" />
-                            <img src={gal2} alt="" />
-                            <img src={gal10} alt="" />
-
-                            {window.innerWidth >= 765 && window.innerWidth <= 934 ? '' : <img src={gal6} alt="" />}
-                            {window.innerWidth >= 765 && window.innerWidth <= 934 ? '' : <img className='bigImg2' src={gal7} alt="" />}
-                            {window.innerWidth >= 765 && window.innerWidth <= 934 ? '' : <img src={gal9} alt="" />}
-                        </div>
-                        {/*  </div>
-                        {/* <div className="gal2">
-                            <img src={gal3} alt="" />
-                            <img src={gal5} alt="" />
-                            <img src={gal4} alt="" />
-                            <img src={gal8} alt="" />
-                        </div> */}
-                        <div className="gal3"></div>
+                        <HoverCarousel images={images} />
                     </div>
                 </div>
                 <div className='lineBar'></div>
@@ -179,9 +171,7 @@ const Home = () => {
                     </form>
                 </div>
             </div>
-            <div className="footer">
-                <img src={wave} alt="" />
-            </div>
+
         </div>
     )
 }

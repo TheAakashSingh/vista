@@ -92,8 +92,9 @@
 }
 
 .boxBoat1 {
-    background: url('../Images/bgBoat.jpg');
+    background: url('../Images/bgBoat3.jpg');
     background-size: cover;
+    filter: drop-shadow(2px 4px 6px black);
 }
 
 .boat1>.boxBoat1 {

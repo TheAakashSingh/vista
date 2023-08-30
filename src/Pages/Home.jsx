@@ -123,7 +123,7 @@ const Home = () => {
                                         <span>Your Luxurious Boat Rental Experience</span>
                                         <span>3D PRODUCT</span>
                                         <span>Discover the ultimate in luxury and comfort with Go-Star, where your dreams of an unforgettable boat adventure come true. Our exceptional boat rental service is dedicated to providing you with a one-of-a-kind experience that blends the excitement of cruising with the comforts of home. Step aboard and embark on a journey of indulgence and relaxation.</span>
-                                        <span>Discover the Advantages</span>
+                                        <span>Discover the Advantage</span>
                                     </div>
                                     <img src={gal2} alt="" />
                                 </div>

@@ -173,7 +173,7 @@
 .bottomSec {
     /* background-color: #d3e6fd; */
     background: url('../Images/wave.png');
-    padding: 100px 40px;
+    padding: 50px 40px;
     /* background-size: cover; */
     background-position-y: bottom;
     background-size: contain;
@@ -304,6 +304,7 @@
     border-radius: 11px;
     padding: 19px 14px;
     color: #ffff;
+    margin-bottom: 57px;
 
 }
 
@@ -366,6 +367,9 @@
 .awssld__container {
     width: 240px !important;
     height: 194px !important;
+}
+.carousel{
+    scroll-behavior: smooth !important;
 }
 .carousel>ul{
     gap: 27px;

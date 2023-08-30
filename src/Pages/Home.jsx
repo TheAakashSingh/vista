@@ -28,6 +28,7 @@ import gal6 from '../Images/gal7.jpg'
 import gal9 from '../Images/gal9.jpg'
 import gal10 from '../Images/gal10.jpg'
 const AutoplaySlider = withAutoplay(AwesomeSlider);
+
 const Home = () => {
     const [click, setClick] = useState(false);
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);

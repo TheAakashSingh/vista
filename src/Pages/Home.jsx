@@ -85,7 +85,7 @@ const Home = () => {
                     <ul>
                         <li><a href="#ourBoat" onClick={scrollToOurBoat}>Our Boat</a></li>
                         <li><a href="#gallery" onClick={scrollToGallery}>Gallery</a></li>
-                        <li><a href="#reviews" onClick={scrollToReview }>Reviews</a></li>
+                        <li><a href="#reviews" onClick={scrollToReview}>Reviews</a></li>
                         <li><a href="#contactus" onCanPlay={scrollToContact}>Contact Us</a></li>
                     </ul>
                 </div>
@@ -114,7 +114,50 @@ const Home = () => {
                         <span>Our Boat</span>
                         <span>Biuld and Get On Board Of Your Dream Silboat</span>
                     </div>
-                    div.
+                    <div className="boatSection">
+                        <div className="boat1">
+                            <div className="boxBoat1">
+                                <span>Go-Star</span>
+                                <div className="nextPartBoat">
+                                    <div className="nextPart1">
+                                        <span>Discover the game changinng power of new era</span>
+                                        <span>3D PRODUCT</span>
+                                        <span>VISUALIZATION in 2023</span>
+                                        <span>Discover the Advantages</span>
+                                    </div>
+                                    {/* <img src={gal2} alt="" /> */}
+                                </div>
+                            </div>
+                        </div>
+                        <div className="boat2">
+                            <div className="boxBoat1">
+                                <span>Go-Star</span>
+                                <div className="nextPartBoat">
+                                    <div className="nextPart1">
+                                        <span>Discover the game changinng power of new era</span>
+                                        <span>3D PRODUCT</span>
+                                        <span>VISUALIZATION in 2023</span>
+                                        <span>Discover the Advantages</span>
+                                    </div>
+                                    {/* <img src={gal3} alt="" /> */}
+                                </div>
+                            </div>
+                        </div>
+                        <div className="boat3">
+                            <div className="boxBoat1">
+                                <span>Go-Star</span>
+                                <div className="nextPartBoat">
+                                    <div className="nextPart1">
+                                        <span>Discover the game changinng power of new era</span>
+                                        <span>3D PRODUCT</span>
+                                        <span>VISUALIZATION in 2023</span>
+                                        <span>Discover the Advantages</span>
+                                    </div>
+                                    {/* <img src={gal4} alt="" /> */}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div className='lineBar'></div>
                 <div className="layer2_mid2Sec" id='gallery' ref={galleryRef}>
@@ -128,7 +171,7 @@ const Home = () => {
             </div>
             <div className="reviewSection" >
                 <div>
-                    <span className='galleryHeading' id='reviews'ref={reviewRef}>Reviews</span>
+                    <span className='galleryHeading' id='reviews' ref={reviewRef}>Reviews</span>
 
                 </div>
                 <div style={{ display: 'flex', alignItems: 'center', flexDirection: 'column', justifyContent: 'center', width: '-webkit-fill-available' }}>

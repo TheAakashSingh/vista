@@ -549,6 +549,9 @@
     .nextPartBoat {
         flex-direction: column-reverse;
     }
+    .nextPartBoat>img {
+        width: 100%;
+    }
 
     .visibleji {
         display: block;

@@ -19,9 +19,9 @@ import bgvideo2 from '../Images/bgvdoMobile.mp4'
 import Carousole from '../Components/Carousole'
 import gal1 from '../Images/gal1.JPG'
 import gal7 from '../Images/DJI_0240.JPG'
-import gal2 from '../Images/gal2.jpg'
-import gal3 from '../Images/DJI_0258.JPG'
-import gal4 from '../Images/DJI_0259.JPG'
+import gal2 from '../Images/gal2.JPG'
+import gal3 from '../Images/gal3.JPG'
+import gal4 from '../Images/gal4.JPG'
 import gal5 from '../Images/DJI_0268.JPG'
 import gal8 from '../Images/DJI_0269.JPG'
 import gal6 from '../Images/gal7.jpg'
@@ -29,17 +29,22 @@ import gal9 from '../Images/gal9.jpg'
 import gal10 from '../Images/gal10.jpg'
 const AutoplaySlider = withAutoplay(AwesomeSlider);
 
+
 const Home = () => {
     const [click, setClick] = useState(false);
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
     const images = [
         gal1,
-        gal6,
-        gal10,
-        gal9,
-        gal4,
-        gal5,
+        gal2,
+        gal3,
+        gal4
+
+
     ];
+    const ourBoatRef = useRef(null);
+    const galleryRef = useRef(null);
+    const reviewRef = useRef(null);
+    const contactRef = useRef(null);
     useEffect(() => {
         const handleResize = () => {
             setIsMobile(window.innerWidth <= 768);
@@ -51,6 +56,22 @@ const Home = () => {
             window.removeEventListener('resize', handleResize);
         };
     }, []);
+
+    const scrollToOurBoat = () => {
+        ourBoatRef.current.scrollIntoView({ behavior: 'smooth' });
+    };
+
+    const scrollToGallery = () => {
+        galleryRef.current.scrollIntoView({ behavior: 'smooth' });
+    };
+    const scrollToReview = () => {
+        reviewRef.current.scrollIntoView({ behavior: 'smooth' });
+    };
+
+    const scrollToContact = () => {
+        contactRef.current.scrollIntoView({ behavior: 'smooth' });
+    };
+
     return (
         <div className='home'>
             <div className="topSec">
@@ -62,10 +83,10 @@ const Home = () => {
             <div className="layer1">
                 <div className={`nav ${click ? 'visibleji' : 'invisible'}`}>
                     <ul>
-                        <li><a href="#ourBoat">Our Boat</a></li>
-                        <li><a href="#gallery">Gallery</a></li>
-                        <li><a href="#reviews">Reviews</a></li>
-                        <li><a href="#contactus">Contact Us</a></li>
+                        <li><a href="#ourBoat" onClick={scrollToOurBoat}>Our Boat</a></li>
+                        <li><a href="#gallery" onClick={scrollToGallery}>Gallery</a></li>
+                        <li><a href="#reviews" onClick={scrollToReview }>Reviews</a></li>
+                        <li><a href="#contactus" onCanPlay={scrollToContact}>Contact Us</a></li>
                     </ul>
                 </div>
             </div>
@@ -87,17 +108,16 @@ const Home = () => {
                 </div>
 
             </div>
-            <div className="mid2Sec " id='ourBoat'>
+            <div className="mid2Sec " id='ourBoat' ref={ourBoatRef}>
                 <div className="layer_mid2Sec">
-                    {/* <img src={cap} alt="" /> */}
                     <div className="head1">
                         <span>Our Boat</span>
                         <span>Biuld and Get On Board Of Your Dream Silboat</span>
                     </div>
-                    {/* <img src={wheel} alt="" /> */}
+                    div.
                 </div>
                 <div className='lineBar'></div>
-                <div className="layer2_mid2Sec" id='gallery'>
+                <div className="layer2_mid2Sec" id='gallery' ref={galleryRef}>
                     <span>Gallery</span>
                     <div className="gallerySection">
                         <HoverCarousel images={images} />
@@ -108,7 +128,7 @@ const Home = () => {
             </div>
             <div className="reviewSection" >
                 <div>
-                    <span className='galleryHeading' id='reviews'>Reviews</span>
+                    <span className='galleryHeading' id='reviews'ref={reviewRef}>Reviews</span>
 
                 </div>
                 <div style={{ display: 'flex', alignItems: 'center', flexDirection: 'column', justifyContent: 'center', width: '-webkit-fill-available' }}>
@@ -126,7 +146,6 @@ const Home = () => {
                                     interval={2000}
                                     infinite
                                     autoPlay
-
 
                                 >
                                     <div className='paage'><Carousole image={img1} name="Julie Williams" reviews="Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores dolor numquam praesentium expedita? Ipsa voluptatibus consectetur eveniet. Ipsum!" /></div>
@@ -155,7 +174,7 @@ const Home = () => {
 
 
             </div>
-            <div className='contactHead' id='contactus'> <span >Contact Us</span></div>
+            <div className='contactHead' id='contactus' ref={contactRef}> <span >Contact Us</span></div>
             <div className="bottomSec" >
 
                 <div className="map">

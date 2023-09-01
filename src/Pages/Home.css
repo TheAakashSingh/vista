@@ -557,8 +557,12 @@
     }
 }
 @media (max-width:670px ) {
-    .imgSection{
-        display: none;
+    .menu-card{
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-top: 12px;
     }
 }
 

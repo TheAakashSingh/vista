@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import '../Pages/Home.css';
-import gal3 from '../Images/gal3.JPG';
+import engine from '../Images/menuEngine.jpg';
 
 const MenuCard = ({menuItems, heading}) => {
 
@@ -8,7 +8,7 @@ const MenuCard = ({menuItems, heading}) => {
     return (
         <div className='menu-card' style={{ display: 'flex' }}>
             <div className="imgSection">
-                <img src={gal3} alt="" />
+                <img src={engine} alt="" />
             </div>
             <div className="bodyContent">
                 <p>{heading}</p>

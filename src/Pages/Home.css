@@ -47,121 +47,135 @@
 .mid2Sec {
     display: flex;
     flex-direction: column;
-    margin-top: 30px;
+    margin-top: 44px;
     margin-bottom: -16px;
 }
 
 .mid2Sec>.layer_mid2Sec {}
 
 .boatSection {
-    display: flex;
-    flex-direction: column;
-    margin: 20px 0px;
-    gap: 25px;
-    padding: 22px 0px;
-    justify-content: center;
-    background-color: #b5d3f9;
+
+    background-color: #5695e2;
+    color: #000000;
 }
 
-.boat1,
-.boat2,
-.boat3,
-.boat4 {
-    border-radius: 6px;
-
-}
-
-.nextPartBoat {
+.boatSectionContent {
     display: flex;
-    gap: 14px;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    padding: 80px 0px;
+    gap: 70px;
 }
 
-.nextPart1 {
+.boatP1 {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    gap: 10px;
-    color: #ffff;
+    gap: 20px;
 }
 
-.nextPartBoat>img {
-    width: 200px;
-    border-radius: 16px;
+.linemenu {
+    height: 5px;
+    background-color: #aaaa4e;
 }
 
-.boxBoat1 {
-    background: url('../Images/bgBoat3.jpg');
-    background-size: cover;
-    filter: drop-shadow(2px 4px 6px black);
+.bodyPart>:nth-child(1) {
+    font-size: 14px;
+    font-weight: 700;
+    color: #aaaa4e;
 }
 
-.boat1>.boxBoat1 {
-    float: right;
-    margin: 2px 40px;
-
-    padding: 22px 24px;
-}
-
-.boat2>.boxBoat1 {
-    float: left;
-    margin: 2px 40px;
-    padding: 22px 24px;
-}
-
-.boat3>.boxBoat1 {
-    float: right;
-    margin: 2px 40px;
-    padding: 22px 24px;
-}
-
-.boat4>.boxBoat1 {
-    float: left;
-    margin: 2px 40px;
-    padding: 22px 24px;
-}
-
-.boxBoat1 {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    border-radius: 10px;
-}
-
-.boxBoat1>:nth-child(1) {
-    width: max-content;
-    font-size: 36px;
-    color: #ffff;
-    font-weight: 800;
-}
-
-.nextPart1>:nth-child(1) {
+.headBoat>:nth-child(1) {
     font-size: 27px;
-    font-weight: 600;
-    max-width: 412px;
+    font-weight: 700;
+    color: #f7f700;
 }
 
-.nextPart1>:nth-child(2) {
-    font-size: 25px;
-    font-weight: 600;
-    font-style: italic;
+.bodyPart {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
-.nextPart1>:nth-child(3) {
-    max-width: 371px;
-    font-size: 13px;
-    font-weight: 600;
-    color: #fbfcfd;
-    font-style: italic;
+.bodyPart>ul {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    gap: 15px;
+    color: #ffff;
+    font-size: 15px;
+    font-weight: 700;
+}
+.bodyPart>ul>li {
+  cursor: pointer;
 }
 
-.nextPart1>:nth-child(4) {
-
-    font-weight: 100;
-    color: #fafafa;
-
+.boatP2 {
+    display: flex;
+    background-color: #ffff;
+    gap: 20px;
 }
+
+
+.imgSection{
+    display: flex;
+}
+.imgSection>img {
+    width: 300px;
+}
+
+.ques1>ul>li {
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.bodyContent {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    padding: 27px 50px;
+    min-width: 250px;
+}
+
+.bodyContent>p {
+    font-weight: 800;
+    font-size: 17px;
+}
+
+.ques1 {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ques1>:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    gap: 15px;
+}
+
+.ques1>:nth-child(2) {
+    gap: 15px;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    ;
+}
+
+
+
+
+
+
+
 
 
 
@@ -271,7 +285,7 @@
 .lineBar {
     height: 5px;
     width: 100%;
-    background-color: #cacaca;
+    background-color: #e0e0e0;
     margin-top: 16px;
     margin-bottom: 16px;
 }
@@ -408,11 +422,7 @@
 }
 
 .reviewSection>div>.container_rev {
-    /* background-color: #012f6b; */
-    background: url('../Images/bgBoat3.jpg');
-    filter: drop-shadow(2px 4px 6px black);
-
-    background-size: cover;
+    background-color: #012f6b;
     width: 75%;
     margin: 27px 0px;
     border-radius: 11px;
@@ -545,17 +555,15 @@
         width: 604px !important;
     }
 }
+@media (max-width:670px ) {
+    .imgSection{
+        display: none;
+    }
+}
 
 @media (max-width:497px) {
     .logoMain>:nth-child(2) {
         display: block;
-    }
-
-    .nextPartBoat {
-        flex-direction: column-reverse;
-    }
-    .nextPartBoat>img {
-        width: 100%;
     }
 
     .visibleji {
@@ -591,10 +599,6 @@
 
 @media (max-width:1500px) {
     .bottomSec {
-        flex-wrap: wrap;
-    }
-
-    .boatSection {
         flex-wrap: wrap;
     }
 

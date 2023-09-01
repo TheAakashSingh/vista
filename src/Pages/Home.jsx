@@ -27,11 +27,13 @@ import gal8 from '../Images/DJI_0269.JPG'
 import gal6 from '../Images/gal7.jpg'
 import gal9 from '../Images/gal9.jpg'
 import gal10 from '../Images/gal10.jpg'
+import MenuCard from '../Components/MenuCard';
 const AutoplaySlider = withAutoplay(AwesomeSlider);
 
 
 const Home = () => {
     const [click, setClick] = useState(false);
+    const [vd1, setVd] = useState('vehicleDetails');
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
     const images = [
         gal1,
@@ -41,6 +43,53 @@ const Home = () => {
 
 
     ];
+    const menuItems1 = [
+        { ques1: 'Vessel type', ans1: 'Sports Yacht' },
+        { ques1: 'Main Engines', ans1: 'OBM Mercury 150 HP x 2 Nos' },
+        { ques1: 'Genset', ans1: 'Mitsubishi 8 KVA' },
+        { ques1: 'Navigation Aid', ans1: 'GPS + VHF + AIS' },
+        { ques1: 'Mooring', ans1: '20 kg SS anchor with winch' },
+        { ques1: 'G.S. Pump', ans1: 'Submersible DC' },
+        { ques1: 'Lighting', ans1: 'AC/DC' },
+        { ques1: 'Steering', ans1: 'Hydraulic' },
+        { ques1: 'Fresh Water tank', ans1: '450 Ltr Approx x 1 Nos' },
+        { ques1: 'Fuel Tank Petrol', ans1: '216 Ltr x 2 Nos' },
+        { ques1: 'Fuel Tank Diesel', ans1: '150 Ltr x 1 Nos' },
+        { ques1: 'Sewage Holding Taank', ans1: '75 Ltrs' },
+        { ques1: 'Speed', ans1: '22 knots' }
+    ];
+    const menuItems2 = [
+        { ques1: 'Port of Registry', ans1: 'Goa' },
+        { ques1: 'Service Notation', ans1: 'IW Zone 1' },
+    ];
+    const menuItems3 = [
+        { ques1: 'Length (O.A.)', ans1: '13.10 M' },
+        { ques1: 'Breadth (MLD)', ans1: '3.10 M' },
+        { ques1: 'Depth (MLD)', ans1: '1.47 M' },
+        { ques1: 'Draft', ans1: '0.55 M' },
+        { ques1: 'Fresh Water tank', ans1: '450 Ltr Approx x 1 Nos' },
+        { ques1: 'Fuel Tank Petrol', ans1: '216 Ltr x 2 Nos' },
+        { ques1: 'Fuel Tank Diesel', ans1: '150 Ltr x 1 Nos' },
+        { ques1: 'Sewage Holding Taank', ans1: '75 Ltrs' },
+        { ques1: 'Speed', ans1: '22 knots' }
+    ];
+    const menuItems4 = [
+        { ques1: 'Cabin Space', ans1: 'Twin sofa + 1 double bed' },
+        { ques1: 'Navigation Aid', ans1: 'GPS + VHF + AIS' },
+        { ques1: 'Lighting', ans1: 'AC/DC' },
+        { ques1: 'Remote', ans1: 'Push - Pull' },
+        { ques1: 'Pantry', ans1: 'Single induction plate + Mini Fridge + Cofee machine' },
+
+    ];
+    const [selectedMenuItem, setSelectedMenuItem] = useState('vehicleDetails');
+    const [menuCardVisible, setMenuCardVisible] = useState(true);
+
+    const handleMenuItemClick = (menuItem) => {
+        setSelectedMenuItem(menuItem);
+        setMenuCardVisible(true);
+    };
+
+
     const ourBoatRef = useRef(null);
     const galleryRef = useRef(null);
     const reviewRef = useRef(null);
@@ -106,78 +155,49 @@ const Home = () => {
                     </video>
 
                 </div>
-                <div className='lineBar' style={{marginTop:'0px'}}></div>
-
 
             </div>
             <div className="mid2Sec " id='ourBoat' ref={ourBoatRef}>
-                 <div className="layer_mid2Sec">
+                <div className="layer_mid2Sec">
                     <div className="head1">
                         <span>Our Boat</span>
                         <span>Biuld and Get On Board Of Your Dream Silboat</span>
                     </div>
-                <div className='lineBar' style={{marginBottom:'-20px'}}></div>
-
                     <div className="boatSection">
-                        <div className="boat1">
-                            <div className="boxBoat1">
-                                <span>Go-Star</span>
-                                <div className="nextPartBoat">
-                                    <div className="nextPart1">
-                                        <span>Your Luxurious Boat Rental Experience</span>
-                                        <span>3D PRODUCT</span>
-                                        <span>Discover the ultimate in luxury and comfort with Go-Star, where your dreams of an unforgettable boat adventure come true. Our exceptional boat rental service is dedicated to providing you with a one-of-a-kind experience that blends the excitement of cruising with the comforts of home. Step aboard and embark on a journey of indulgence and relaxation.</span>
-                                        <span>Discover the Advantages</span>
-                                    </div>
-                                    <img src={gal2} alt="" />
+                        <div className="boatSectionContent">
+                            <div className="boatP1">
+                                <div className="headBoat">
+                                    <span>SPECIFICATIONS</span>
+                                </div>
+                                <div className="bodyPart">
+                                    <span>ENGINE</span>
+                                    <div className="linemenu"></div>
+                                    <ul>
+                                        <li onClick={() => handleMenuItemClick('vehicleDetails')}>VEHICLES DETAILS</li>
+                                        <li onClick={() => handleMenuItemClick('registrationDetails')}>REGISTRATION DETAILS</li>
+                                        <li onClick={() => handleMenuItemClick('measure')}>MEASUREMENTS</li>
+                                        <li onClick={() => handleMenuItemClick('ammen')}>VEHICLES AMMENMENTS</li>
+                                    </ul>
                                 </div>
                             </div>
-                        </div>
-                        <div className="boat2">
-                            <div className="boxBoat1">
-                                <span>Go-Star</span>
-                                <div className="nextPartBoat">
-                                    <div className="nextPart1">
-                                        <span>Unparalleled Comfort on the Water</span>
-                                        <span>3D PRODUCT</span>
-                                        <span>At Go-Star, we redefine the concept of boat rentals. Imagine a vessel where every detail is meticulously designed to ensure your comfort and convenience. Our boats feature spacious and elegantly furnished living areas, complete with plush sofas, cozy beds, and dining spaces that provide the perfect atmosphere for relaxation, socializing, and fine dining.</span>
-                                        <span>Discover the Advantages</span>
-                                    </div>
-                                    <img src={gal3} alt="" />
-                                </div>
-                            </div>
-                        </div>
-                        <div className="boat3">
-                            <div className="boxBoat1">
-                                <span>Go-Star</span>
-                                <div className="nextPartBoat">
-                                    <div className="nextPart1">
-                                        <span>Adventure and Exploration Await</span>
-                                        <span>3D PRODUCT</span>
-                                        <span>Step out onto the deck and be greeted by breathtaking vistas that change with every passing moment. Feel the wind in your hair as you cruise along stunning coastlines, discovering hidden coves and pristine beaches. Whether you're seeking tranquility or adventure, Go-Star offers the ideal setting for both.</span>
-                                        <span>Discover the Advantages</span>
-                                    </div>
-                                    <img src={gal4} alt="" />
-                                </div>
-                            </div>
-                        </div>
-                        <div className="boat4">
-                            <div className="boxBoat1">
-                                <span>Go-Star</span>
-                                <div className="nextPartBoat">
-                                    <div className="nextPart1">
-                                        <span>Book Your Voyage</span>
-                                        <span>VISUALIZATION in 2023</span>
-                                        <span>Don't miss out on the opportunity to sail with Go-Star and experience the epitome of luxury on the water. Contact us today to reserve your spot and embark on a journey that promises relaxation, beauty, and the thrill of the sea. Your voyage with Go-Star awaits – a voyage that promises to be everything you've ever dreamed of and more.</span>
-                                        <span>Discover the Advantages</span>
-                                    </div>
-                                    <img src={gal4} alt="" />
-                                </div>
+                            <div className={`boatP2 ${menuCardVisible ? '' : 'hide'}`}>
+                                {selectedMenuItem === 'vehicleDetails' && (
+                                    <MenuCard menuItems={menuItems1} heading='VEHICLE DETAILS' />
+                                )}
+                                {selectedMenuItem === 'registrationDetails' && (
+                                    <MenuCard menuItems={menuItems2} heading='REGISTRATION DETAILS' />
+                                )}
+                                {selectedMenuItem === 'measure' && (
+                                    <MenuCard menuItems={menuItems3} heading='MEASUREMENTS' />
+                                )}
+                                {selectedMenuItem === 'ammen' && (
+                                    <MenuCard menuItems={menuItems4} heading='VEHICLES AMMENMENTS' />
+                                )}
                             </div>
                         </div>
                     </div>
                 </div>
-                <div className='lineBar' style={{marginTop:'-20px'}}></div>
+                <div className='lineBar'></div>
                 <div className="layer2_mid2Sec" id='gallery' ref={galleryRef}>
                     <span>Gallery</span>
                     <div className="gallerySection">
